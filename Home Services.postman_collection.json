@@ -1,0 +1,3517 @@
+{
+	"info": {
+		"_postman_id": "8945beea-e062-4639-9c10-82b6a1744f21",
+		"name": "Home Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25892408"
+	},
+	"item": [
+		{
+			"name": "visits",
+			"item": [
+				{
+					"name": "Get all visits",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/visits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Visit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contract_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "test notesa",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "2023-10-23",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "2023-10-23",
+									"type": "text"
+								},
+								{
+									"key": "image[]",
+									"description": "'pending'~'start'~'end'~'delay'",
+									"type": "file",
+									"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+								},
+								{
+									"key": "duration",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "start",
+									"type": "text"
+								},
+								{
+									"key": "image[]",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/visits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"contract_id\": \"1\",\n        \"notes\": \"test notes\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"start_time\": \"2023-10-23\",\n        \"end_time\": \"2023-10-23\",\n        \"duration\": \"5\",\n        \"status\": \"start\",\n        \"images\": [\n            \"/Users/elbanna/Documents/new_laravel/public/visit_images/202303061540.png\"\n        ],\n        \"updated_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"created_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"id\": 39\n    }\n}"
+						},
+						{
+							"name": "Store Visit Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "starta",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A status is required. A status is not a VisitStatus. \",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Visit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contract_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "test notesa",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "2023-10-23",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "2023-10-23",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "duration",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "start",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": [
+										"/Users/elbanna/Downloads/Untitled-2 copy.png",
+										"/Users/elbanna/Downloads/Untitled-2.png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/visits/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visits",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"contract_id\": \"1\",\n        \"notes\": \"test notes\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"start_time\": \"2023-10-23\",\n        \"end_time\": \"2023-10-23\",\n        \"duration\": \"5\",\n        \"status\": \"start\",\n        \"images\": [\n            \"/Users/elbanna/Documents/new_laravel/public/visit_images/202303061540.png\"\n        ],\n        \"updated_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"created_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"id\": 39\n    }\n}"
+						},
+						{
+							"name": "Store Visit Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "starta",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A status is required. A status is not a VisitStatus. \",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "preview visits",
+			"item": [
+				{
+					"name": "Get all preview visits",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/preview_visits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"preview_visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store preview Visit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "visit_request_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "test notesa",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "2023-10-23",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_time",
+									"value": "2023-10-23",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image[]",
+									"description": "'pending'~'start'~'end'~'delay'",
+									"type": "file",
+									"src": "/Users/elbanna/Downloads/WhatsApp Image 2023-03-14 at 4.05.42 PM.jpeg"
+								},
+								{
+									"key": "duration",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "start",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/preview_visits",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"preview_visits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"contract_id\": \"1\",\n        \"notes\": \"test notes\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"start_time\": \"2023-10-23\",\n        \"end_time\": \"2023-10-23\",\n        \"duration\": \"5\",\n        \"status\": \"start\",\n        \"images\": [\n            \"/Users/elbanna/Documents/new_laravel/public/visit_images/202303061540.png\"\n        ],\n        \"updated_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"created_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"id\": 39\n    }\n}"
+						},
+						{
+							"name": "Store Visit Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "starta",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A status is required. A status is not a VisitStatus. \",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit preivew Visit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "visit_request_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "test notesa",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "2023-10-23",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "2023-10-23",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "5",
+									"description": "'pending'~'start'~'end'~'delay'",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "start",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								},
+								{
+									"key": "image[]",
+									"description": "'pending'~'start'~'end'~'delay'",
+									"type": "file",
+									"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/preview_visits/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"preview_visits",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"contract_id\": \"1\",\n        \"notes\": \"test notes\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"start_time\": \"2023-10-23\",\n        \"end_time\": \"2023-10-23\",\n        \"duration\": \"5\",\n        \"status\": \"start\",\n        \"images\": [\n            \"/Users/elbanna/Documents/new_laravel/public/visit_images/202303061540.png\"\n        ],\n        \"updated_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"created_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"id\": 39\n    }\n}"
+						},
+						{
+							"name": "Store Visit Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "starta",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A status is required. A status is not a VisitStatus. \",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "visit requests",
+			"item": [
+				{
+					"name": "Get all visit requests",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/visit_requests",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visit_requests"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all visit requests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/visit_requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit_requests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:22:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:22:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"sales_id\": null,\n            \"notes\": \"test notesa\",\n            \"lat\": 20,\n            \"long\": 20,\n            \"status\": \"pending\",\n            \"created_at\": \"2023-03-19T09:20:44.000000Z\",\n            \"updated_at\": \"2023-03-19T09:20:44.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Prof. Enoch Stracke\",\n                \"email\": \"jmann@example.net\"\n            },\n            \"sales\": {\n                \"id\": 1,\n                \"name\": \"Prof. Enoch Stracke\",\n                \"email\": \"jmann@example.net\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 11,\n            \"sales_id\": 12,\n            \"notes\": \"Ipsam ut exercitationem harum exercitationem facere. Mollitia velit libero aliquam laudantium voluptatem et dolore ipsum. Nobis dignissimos ut et modi maiores nemo ducimus repudiandae. Reiciendis rerum quibusdam sint aut ex eos architecto.\",\n            \"lat\": 1.32,\n            \"long\": 24.1,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Jeanie Wehner\",\n                \"email\": \"jesus46@example.net\"\n            },\n            \"sales\": {\n                \"id\": 2,\n                \"name\": \"Jeanie Wehner\",\n                \"email\": \"jesus46@example.net\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 13,\n            \"sales_id\": 14,\n            \"notes\": \"Sequi quia quia dolor omnis rem. Et est laborum ut labore tempora praesentium eligendi eum. Earum laudantium voluptas praesentium.\",\n            \"lat\": 17.92,\n            \"long\": 27.859515,\n            \"status\": \"voice_communication\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 3,\n                \"name\": \"Trudie Schaefer\",\n                \"email\": \"gunner65@example.com\"\n            },\n            \"sales\": {\n                \"id\": 3,\n                \"name\": \"Trudie Schaefer\",\n                \"email\": \"gunner65@example.com\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"user_id\": 15,\n            \"sales_id\": 16,\n            \"notes\": \"Et nostrum quis nisi eligendi placeat ab. Quia delectus magnam quia repellat suscipit placeat quas. Nihil quos omnis voluptatum distinctio. Ratione voluptatem qui debitis.\",\n            \"lat\": 15.607481317,\n            \"long\": 1,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 4,\n                \"name\": \"Mabel Schmitt\",\n                \"email\": \"khoppe@example.net\"\n            },\n            \"sales\": {\n                \"id\": 4,\n                \"name\": \"Mabel Schmitt\",\n                \"email\": \"khoppe@example.net\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"user_id\": 17,\n            \"sales_id\": 18,\n            \"notes\": \"Alias fuga similique quia nisi sunt laudantium laudantium. Saepe iste ducimus ullam labore ratione delectus. Qui quo architecto ea ullam maxime ex sit sit.\",\n            \"lat\": 13.3205558,\n            \"long\": 22.06,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 5,\n                \"name\": \"Tyrell Mante PhD\",\n                \"email\": \"jlarkin@example.com\"\n            },\n            \"sales\": {\n                \"id\": 5,\n                \"name\": \"Tyrell Mante PhD\",\n                \"email\": \"jlarkin@example.com\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"user_id\": 19,\n            \"sales_id\": 20,\n            \"notes\": \"Et ut nihil natus earum consequuntur. Similique tempora unde fuga culpa doloremque aut. Amet est neque sunt quia. Ipsum perspiciatis harum hic et unde ut autem.\",\n            \"lat\": 25.8700071,\n            \"long\": 27.138,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 6,\n                \"name\": \"Stephon Boehm\",\n                \"email\": \"nitzsche.floyd@example.com\"\n            },\n            \"sales\": {\n                \"id\": 6,\n                \"name\": \"Stephon Boehm\",\n                \"email\": \"nitzsche.floyd@example.com\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"user_id\": 21,\n            \"sales_id\": 22,\n            \"notes\": \"Non nostrum consequatur illum eum. Unde voluptatem fuga consectetur sed explicabo. Perferendis iusto non nobis non.\",\n            \"lat\": 4.89870601,\n            \"long\": 15.542918,\n            \"status\": \"pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 7,\n                \"name\": \"Barton Dare\",\n                \"email\": \"liliane79@example.org\"\n            },\n            \"sales\": {\n                \"id\": 7,\n                \"name\": \"Barton Dare\",\n                \"email\": \"liliane79@example.org\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"user_id\": 23,\n            \"sales_id\": 24,\n            \"notes\": \"Corporis aut laborum autem dolor repudiandae expedita fuga. Minus iusto est nihil. Qui dolorem quia sed dicta laudantium.\",\n            \"lat\": 16.012899543,\n            \"long\": 16.1062817,\n            \"status\": \"preview_start\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 8,\n                \"name\": \"Madeline Prosacco\",\n                \"email\": \"prohaska.lurline@example.org\"\n            },\n            \"sales\": {\n                \"id\": 8,\n                \"name\": \"Madeline Prosacco\",\n                \"email\": \"prohaska.lurline@example.org\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"user_id\": 25,\n            \"sales_id\": 26,\n            \"notes\": \"Tempora impedit debitis rerum ipsum delectus. Et maiores fuga rerum. Odit ut nisi natus dolor et dolore. Doloribus quia et debitis voluptas sit.\",\n            \"lat\": 21.1,\n            \"long\": 13.943563483,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 9,\n                \"name\": \"Mrs. Delores Corwin MD\",\n                \"email\": \"erich.gorczany@example.org\"\n            },\n            \"sales\": {\n                \"id\": 9,\n                \"name\": \"Mrs. Delores Corwin MD\",\n                \"email\": \"erich.gorczany@example.org\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"user_id\": 27,\n            \"sales_id\": 28,\n            \"notes\": \"Nesciunt dolores accusamus officiis vitae enim ratione. Voluptatum minima illum ab ea fugit ratione odio. Officiis sit vero porro facilis et voluptatem voluptatibus.\",\n            \"lat\": 28.89925597,\n            \"long\": 27.87223344,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 10,\n                \"name\": \"Omer Heaney\",\n                \"email\": \"zella04@example.net\"\n            },\n            \"sales\": {\n                \"id\": 10,\n                \"name\": \"Omer Heaney\",\n                \"email\": \"zella04@example.net\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"user_id\": 29,\n            \"sales_id\": 30,\n            \"notes\": \"Quo consequatur a qui velit consequatur non a. Culpa odit ut aut mollitia modi sequi. Sed aliquid vitae architecto officiis.\",\n            \"lat\": 1.53,\n            \"long\": 17,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 11,\n                \"name\": \"Reid Upton Jr.\",\n                \"email\": \"rodriguez.marley@example.org\"\n            },\n            \"sales\": {\n                \"id\": 11,\n                \"name\": \"Reid Upton Jr.\",\n                \"email\": \"rodriguez.marley@example.org\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Store Visit Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "test notesa",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "start",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/visit_requests",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visit_requests"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit_requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit_requests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:23:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:23:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"updated successfully\",\n    \"data\": {\n        \"user_id\": \"1\",\n        \"notes\": \"test notesa\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"updated_at\": \"2023-03-19T09:23:47.000000Z\",\n        \"created_at\": \"2023-03-19T09:23:47.000000Z\",\n        \"id\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Visit Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contract_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "voice_communication",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/visit_requests/122",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"visit_requests",
+								"122"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"contract_id\": \"1\",\n        \"notes\": \"test notes\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"start_time\": \"2023-10-23\",\n        \"end_time\": \"2023-10-23\",\n        \"duration\": \"5\",\n        \"status\": \"start\",\n        \"images\": [\n            \"/Users/elbanna/Documents/new_laravel/public/visit_images/202303061540.png\"\n        ],\n        \"updated_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"created_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"id\": 39\n    }\n}"
+						},
+						{
+							"name": "Store Visit Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "starta",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A status is required. A status is not a VisitStatus. \",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "Get all Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all visit requests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/visit_requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit_requests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:22:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:22:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"sales_id\": null,\n            \"notes\": \"test notesa\",\n            \"lat\": 20,\n            \"long\": 20,\n            \"status\": \"pending\",\n            \"created_at\": \"2023-03-19T09:20:44.000000Z\",\n            \"updated_at\": \"2023-03-19T09:20:44.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Prof. Enoch Stracke\",\n                \"email\": \"jmann@example.net\"\n            },\n            \"sales\": {\n                \"id\": 1,\n                \"name\": \"Prof. Enoch Stracke\",\n                \"email\": \"jmann@example.net\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 11,\n            \"sales_id\": 12,\n            \"notes\": \"Ipsam ut exercitationem harum exercitationem facere. Mollitia velit libero aliquam laudantium voluptatem et dolore ipsum. Nobis dignissimos ut et modi maiores nemo ducimus repudiandae. Reiciendis rerum quibusdam sint aut ex eos architecto.\",\n            \"lat\": 1.32,\n            \"long\": 24.1,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Jeanie Wehner\",\n                \"email\": \"jesus46@example.net\"\n            },\n            \"sales\": {\n                \"id\": 2,\n                \"name\": \"Jeanie Wehner\",\n                \"email\": \"jesus46@example.net\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 13,\n            \"sales_id\": 14,\n            \"notes\": \"Sequi quia quia dolor omnis rem. Et est laborum ut labore tempora praesentium eligendi eum. Earum laudantium voluptas praesentium.\",\n            \"lat\": 17.92,\n            \"long\": 27.859515,\n            \"status\": \"voice_communication\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 3,\n                \"name\": \"Trudie Schaefer\",\n                \"email\": \"gunner65@example.com\"\n            },\n            \"sales\": {\n                \"id\": 3,\n                \"name\": \"Trudie Schaefer\",\n                \"email\": \"gunner65@example.com\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"user_id\": 15,\n            \"sales_id\": 16,\n            \"notes\": \"Et nostrum quis nisi eligendi placeat ab. Quia delectus magnam quia repellat suscipit placeat quas. Nihil quos omnis voluptatum distinctio. Ratione voluptatem qui debitis.\",\n            \"lat\": 15.607481317,\n            \"long\": 1,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 4,\n                \"name\": \"Mabel Schmitt\",\n                \"email\": \"khoppe@example.net\"\n            },\n            \"sales\": {\n                \"id\": 4,\n                \"name\": \"Mabel Schmitt\",\n                \"email\": \"khoppe@example.net\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"user_id\": 17,\n            \"sales_id\": 18,\n            \"notes\": \"Alias fuga similique quia nisi sunt laudantium laudantium. Saepe iste ducimus ullam labore ratione delectus. Qui quo architecto ea ullam maxime ex sit sit.\",\n            \"lat\": 13.3205558,\n            \"long\": 22.06,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 5,\n                \"name\": \"Tyrell Mante PhD\",\n                \"email\": \"jlarkin@example.com\"\n            },\n            \"sales\": {\n                \"id\": 5,\n                \"name\": \"Tyrell Mante PhD\",\n                \"email\": \"jlarkin@example.com\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"user_id\": 19,\n            \"sales_id\": 20,\n            \"notes\": \"Et ut nihil natus earum consequuntur. Similique tempora unde fuga culpa doloremque aut. Amet est neque sunt quia. Ipsum perspiciatis harum hic et unde ut autem.\",\n            \"lat\": 25.8700071,\n            \"long\": 27.138,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 6,\n                \"name\": \"Stephon Boehm\",\n                \"email\": \"nitzsche.floyd@example.com\"\n            },\n            \"sales\": {\n                \"id\": 6,\n                \"name\": \"Stephon Boehm\",\n                \"email\": \"nitzsche.floyd@example.com\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"user_id\": 21,\n            \"sales_id\": 22,\n            \"notes\": \"Non nostrum consequatur illum eum. Unde voluptatem fuga consectetur sed explicabo. Perferendis iusto non nobis non.\",\n            \"lat\": 4.89870601,\n            \"long\": 15.542918,\n            \"status\": \"pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 7,\n                \"name\": \"Barton Dare\",\n                \"email\": \"liliane79@example.org\"\n            },\n            \"sales\": {\n                \"id\": 7,\n                \"name\": \"Barton Dare\",\n                \"email\": \"liliane79@example.org\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"user_id\": 23,\n            \"sales_id\": 24,\n            \"notes\": \"Corporis aut laborum autem dolor repudiandae expedita fuga. Minus iusto est nihil. Qui dolorem quia sed dicta laudantium.\",\n            \"lat\": 16.012899543,\n            \"long\": 16.1062817,\n            \"status\": \"preview_start\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 8,\n                \"name\": \"Madeline Prosacco\",\n                \"email\": \"prohaska.lurline@example.org\"\n            },\n            \"sales\": {\n                \"id\": 8,\n                \"name\": \"Madeline Prosacco\",\n                \"email\": \"prohaska.lurline@example.org\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"user_id\": 25,\n            \"sales_id\": 26,\n            \"notes\": \"Tempora impedit debitis rerum ipsum delectus. Et maiores fuga rerum. Odit ut nisi natus dolor et dolore. Doloribus quia et debitis voluptas sit.\",\n            \"lat\": 21.1,\n            \"long\": 13.943563483,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 9,\n                \"name\": \"Mrs. Delores Corwin MD\",\n                \"email\": \"erich.gorczany@example.org\"\n            },\n            \"sales\": {\n                \"id\": 9,\n                \"name\": \"Mrs. Delores Corwin MD\",\n                \"email\": \"erich.gorczany@example.org\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"user_id\": 27,\n            \"sales_id\": 28,\n            \"notes\": \"Nesciunt dolores accusamus officiis vitae enim ratione. Voluptatum minima illum ab ea fugit ratione odio. Officiis sit vero porro facilis et voluptatem voluptatibus.\",\n            \"lat\": 28.89925597,\n            \"long\": 27.87223344,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 10,\n                \"name\": \"Omer Heaney\",\n                \"email\": \"zella04@example.net\"\n            },\n            \"sales\": {\n                \"id\": 10,\n                \"name\": \"Omer Heaney\",\n                \"email\": \"zella04@example.net\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"user_id\": 29,\n            \"sales_id\": 30,\n            \"notes\": \"Quo consequatur a qui velit consequatur non a. Culpa odit ut aut mollitia modi sequi. Sed aliquid vitae architecto officiis.\",\n            \"lat\": 1.53,\n            \"long\": 17,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 11,\n                \"name\": \"Reid Upton Jr.\",\n                \"email\": \"rodriguez.marley@example.org\"\n            },\n            \"sales\": {\n                \"id\": 11,\n                \"name\": \"Reid Upton Jr.\",\n                \"email\": \"rodriguez.marley@example.org\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Store Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/elbanna/Downloads/Untitled-2.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit_requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit_requests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:23:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:23:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"updated successfully\",\n    \"data\": {\n        \"user_id\": \"1\",\n        \"notes\": \"test notesa\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"updated_at\": \"2023-03-19T09:23:47.000000Z\",\n        \"created_at\": \"2023-03-19T09:23:47.000000Z\",\n        \"id\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contract_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "voice_communication",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/categories/122",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"122"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"contract_id\": \"1\",\n        \"notes\": \"test notes\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"start_time\": \"2023-10-23\",\n        \"end_time\": \"2023-10-23\",\n        \"duration\": \"5\",\n        \"status\": \"start\",\n        \"images\": [\n            \"/Users/elbanna/Documents/new_laravel/public/visit_images/202303061540.png\"\n        ],\n        \"updated_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"created_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"id\": 39\n    }\n}"
+						},
+						{
+							"name": "Store Visit Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "starta",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A status is required. A status is not a VisitStatus. \",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "show category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/categories/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "Get all services",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/services",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all visit requests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/visit_requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit_requests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:22:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:22:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"sales_id\": null,\n            \"notes\": \"test notesa\",\n            \"lat\": 20,\n            \"long\": 20,\n            \"status\": \"pending\",\n            \"created_at\": \"2023-03-19T09:20:44.000000Z\",\n            \"updated_at\": \"2023-03-19T09:20:44.000000Z\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Prof. Enoch Stracke\",\n                \"email\": \"jmann@example.net\"\n            },\n            \"sales\": {\n                \"id\": 1,\n                \"name\": \"Prof. Enoch Stracke\",\n                \"email\": \"jmann@example.net\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 11,\n            \"sales_id\": 12,\n            \"notes\": \"Ipsam ut exercitationem harum exercitationem facere. Mollitia velit libero aliquam laudantium voluptatem et dolore ipsum. Nobis dignissimos ut et modi maiores nemo ducimus repudiandae. Reiciendis rerum quibusdam sint aut ex eos architecto.\",\n            \"lat\": 1.32,\n            \"long\": 24.1,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Jeanie Wehner\",\n                \"email\": \"jesus46@example.net\"\n            },\n            \"sales\": {\n                \"id\": 2,\n                \"name\": \"Jeanie Wehner\",\n                \"email\": \"jesus46@example.net\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 13,\n            \"sales_id\": 14,\n            \"notes\": \"Sequi quia quia dolor omnis rem. Et est laborum ut labore tempora praesentium eligendi eum. Earum laudantium voluptas praesentium.\",\n            \"lat\": 17.92,\n            \"long\": 27.859515,\n            \"status\": \"voice_communication\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 3,\n                \"name\": \"Trudie Schaefer\",\n                \"email\": \"gunner65@example.com\"\n            },\n            \"sales\": {\n                \"id\": 3,\n                \"name\": \"Trudie Schaefer\",\n                \"email\": \"gunner65@example.com\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"user_id\": 15,\n            \"sales_id\": 16,\n            \"notes\": \"Et nostrum quis nisi eligendi placeat ab. Quia delectus magnam quia repellat suscipit placeat quas. Nihil quos omnis voluptatum distinctio. Ratione voluptatem qui debitis.\",\n            \"lat\": 15.607481317,\n            \"long\": 1,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 4,\n                \"name\": \"Mabel Schmitt\",\n                \"email\": \"khoppe@example.net\"\n            },\n            \"sales\": {\n                \"id\": 4,\n                \"name\": \"Mabel Schmitt\",\n                \"email\": \"khoppe@example.net\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"user_id\": 17,\n            \"sales_id\": 18,\n            \"notes\": \"Alias fuga similique quia nisi sunt laudantium laudantium. Saepe iste ducimus ullam labore ratione delectus. Qui quo architecto ea ullam maxime ex sit sit.\",\n            \"lat\": 13.3205558,\n            \"long\": 22.06,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 5,\n                \"name\": \"Tyrell Mante PhD\",\n                \"email\": \"jlarkin@example.com\"\n            },\n            \"sales\": {\n                \"id\": 5,\n                \"name\": \"Tyrell Mante PhD\",\n                \"email\": \"jlarkin@example.com\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"user_id\": 19,\n            \"sales_id\": 20,\n            \"notes\": \"Et ut nihil natus earum consequuntur. Similique tempora unde fuga culpa doloremque aut. Amet est neque sunt quia. Ipsum perspiciatis harum hic et unde ut autem.\",\n            \"lat\": 25.8700071,\n            \"long\": 27.138,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 6,\n                \"name\": \"Stephon Boehm\",\n                \"email\": \"nitzsche.floyd@example.com\"\n            },\n            \"sales\": {\n                \"id\": 6,\n                \"name\": \"Stephon Boehm\",\n                \"email\": \"nitzsche.floyd@example.com\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"user_id\": 21,\n            \"sales_id\": 22,\n            \"notes\": \"Non nostrum consequatur illum eum. Unde voluptatem fuga consectetur sed explicabo. Perferendis iusto non nobis non.\",\n            \"lat\": 4.89870601,\n            \"long\": 15.542918,\n            \"status\": \"pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 7,\n                \"name\": \"Barton Dare\",\n                \"email\": \"liliane79@example.org\"\n            },\n            \"sales\": {\n                \"id\": 7,\n                \"name\": \"Barton Dare\",\n                \"email\": \"liliane79@example.org\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"user_id\": 23,\n            \"sales_id\": 24,\n            \"notes\": \"Corporis aut laborum autem dolor repudiandae expedita fuga. Minus iusto est nihil. Qui dolorem quia sed dicta laudantium.\",\n            \"lat\": 16.012899543,\n            \"long\": 16.1062817,\n            \"status\": \"preview_start\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 8,\n                \"name\": \"Madeline Prosacco\",\n                \"email\": \"prohaska.lurline@example.org\"\n            },\n            \"sales\": {\n                \"id\": 8,\n                \"name\": \"Madeline Prosacco\",\n                \"email\": \"prohaska.lurline@example.org\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"user_id\": 25,\n            \"sales_id\": 26,\n            \"notes\": \"Tempora impedit debitis rerum ipsum delectus. Et maiores fuga rerum. Odit ut nisi natus dolor et dolore. Doloribus quia et debitis voluptas sit.\",\n            \"lat\": 21.1,\n            \"long\": 13.943563483,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 9,\n                \"name\": \"Mrs. Delores Corwin MD\",\n                \"email\": \"erich.gorczany@example.org\"\n            },\n            \"sales\": {\n                \"id\": 9,\n                \"name\": \"Mrs. Delores Corwin MD\",\n                \"email\": \"erich.gorczany@example.org\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"user_id\": 27,\n            \"sales_id\": 28,\n            \"notes\": \"Nesciunt dolores accusamus officiis vitae enim ratione. Voluptatum minima illum ab ea fugit ratione odio. Officiis sit vero porro facilis et voluptatem voluptatibus.\",\n            \"lat\": 28.89925597,\n            \"long\": 27.87223344,\n            \"status\": \"offer_price\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 10,\n                \"name\": \"Omer Heaney\",\n                \"email\": \"zella04@example.net\"\n            },\n            \"sales\": {\n                \"id\": 10,\n                \"name\": \"Omer Heaney\",\n                \"email\": \"zella04@example.net\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"user_id\": 29,\n            \"sales_id\": 30,\n            \"notes\": \"Quo consequatur a qui velit consequatur non a. Culpa odit ut aut mollitia modi sequi. Sed aliquid vitae architecto officiis.\",\n            \"lat\": 1.53,\n            \"long\": 17,\n            \"status\": \"preview_pending\",\n            \"created_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"updated_at\": \"2023-03-19T09:22:36.000000Z\",\n            \"user\": {\n                \"id\": 11,\n                \"name\": \"Reid Upton Jr.\",\n                \"email\": \"rodriguez.marley@example.org\"\n            },\n            \"sales\": {\n                \"id\": 11,\n                \"name\": \"Reid Upton Jr.\",\n                \"email\": \"rodriguez.marley@example.org\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Store service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test agai  qaaaaaaa",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test description",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/Users/elbanna/Downloads/Untitled-2 copy.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/services",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit_requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit_requests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:23:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 09:23:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"updated successfully\",\n    \"data\": {\n        \"user_id\": \"1\",\n        \"notes\": \"test notesa\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"updated_at\": \"2023-03-19T09:23:47.000000Z\",\n        \"created_at\": \"2023-03-19T09:23:47.000000Z\",\n        \"id\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contract_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "voice_communication",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/services/122",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"services",
+								"122"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store Visit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "start",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"contract_id\": \"1\",\n        \"notes\": \"test notes\",\n        \"lat\": \"20\",\n        \"long\": \"20\",\n        \"start_time\": \"2023-10-23\",\n        \"end_time\": \"2023-10-23\",\n        \"duration\": \"5\",\n        \"status\": \"start\",\n        \"images\": [\n            \"/Users/elbanna/Documents/new_laravel/public/visit_images/202303061540.png\"\n        ],\n        \"updated_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"created_at\": \"2023-03-06T15:40:25.000000Z\",\n        \"id\": 39\n    }\n}"
+						},
+						{
+							"name": "Store Visit Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contract_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "test notesa",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2023-10-23",
+											"type": "text"
+										},
+										{
+											"key": "image[]",
+											"type": "file",
+											"src": "/Users/elbanna/Desktop/Screen Shot 2023-02-23 at 10.59.37 AM.png"
+										},
+										{
+											"key": "duration",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "starta",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/visit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"visit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 15:42:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A status is required. A status is not a VisitStatus. \",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11111111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:16:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:16:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"registered successfully\",\n    \"data\": {\n        \"id\": 31,\n        \"name\": \"test\",\n        \"email\": \"admin@gmail.com\",\n        \"deleted_at\": null,\n        \"created_at\": \"2023-03-19T13:01:47.000000Z\",\n        \"updated_at\": \"2023-03-19T13:01:47.000000Z\",\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODViYzZkYmMyNmVlYTVlMjEzYWUxN2E5NmMwYzE2M2U2YjNkN2IwYjhhOGMyMGY4NDgxZDY3ZmI1NzVkMzBjODU4M2EyODdhMTA3NGI0M2YiLCJpYXQiOjE2NzkyMzg5NjQuODUwODA0LCJuYmYiOjE2NzkyMzg5NjQuODUwODA2LCJleHAiOjE3MTA4NjEzNjQuODQ5NjA0LCJzdWIiOiIzMSIsInNjb3BlcyI6W119.XOrWOG0xKD-h1k8iVCUKkEaD-zOF8pKjt9nbSMqOR84oueA9qSQO_uqnI5qjXEmnQYa2d3Zq1Fmd9sHO9_UbAZjpoP0jp3OpUXDuosfWqzIwT1ZSXLYzJhBMVajKAOluqw9_6l45BSKze9jE7hmbf7LXvX7GMhXJWpPdk-DArTcHtwy80RInP1UYfjaw0CPmkR5fk_YGLB86aqJWW5bhn9SGqAm_XhVKVSD1IZG7CWl-ODZm-IDOzx85hkKqvO-sRm1H7Q08TbKNpDA6QFTm8HMg0c0Q_hX88qk4zKzf2HIie24daPolHINLQwjjfvC8UYIqTOVOkl5z7phaSlEISeDQYo8qvhUPSjRck7BhmJ6tCIg0eyxbQvDvD8wVU8sgnkU2mUEs0JuQXqi38SEq2b_dCnQ8tmOk--O8qPjEVyH0NZ393NwCfCGDKu4gGttt2ubOkhk88xcuURmyzJX5nLDaCgEsl5vClGAyGQ0xn5r92L2rQm-rI5GTsBh23Co8id_RaUDLU9xLachyESA0WMX-ODeJUf2kIjCkJ33f3VOgm3cfY_Njg-l6xO35gXE2hV4pOc-SParcMlvY4v0Tp4QrRAaTkegncmsmSacOO0GsDYQ70DzSiDN-Tzxk8Pv2YG7GjZy3nNz-2JlH7bi4ALPkBQ5toyZS9AnyoSHVDiw\"\n    }\n}"
+						},
+						{
+							"name": "login credential error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "111111111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:17:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:17:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"invalid credentials\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "login validation error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "111111111",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:18:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:18:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The password field is required.\\n\",\n    \"data\": {\n        \"password\": [\n            \"The password field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "11111111",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register validation error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin2@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11111111",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "11111111",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:26:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:26:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The email has already been taken.\\n\",\n    \"data\": {\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin3@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11111111",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "11111111",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:27:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 15:27:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"registered successfully\",\n    \"data\": {\n        \"name\": \"test\",\n        \"email\": \"admin3@gmail.com\",\n        \"updated_at\": \"2023-03-19T15:27:29.000000Z\",\n        \"created_at\": \"2023-03-19T15:27:29.000000Z\",\n        \"id\": 34,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTJjZjM4Yzg5NDk0MzU2MGI5ZWNkOGEwMzllMjYxNGU0NDE4Njk5ZGQwNzIyYzg0NGRlN2E0N2YzMmQ1M2RiYmU2NDlmNjI5YWRjY2FkYTQiLCJpYXQiOjE2NzkyMzk2NDkuODA2NDE3LCJuYmYiOjE2NzkyMzk2NDkuODA2NDE5LCJleHAiOjE3MTA4NjIwNDkuODA1NDA1LCJzdWIiOiIzNCIsInNjb3BlcyI6W119.lsZvuqgNxKqsClcMwrkqXP9lmrmVkk2w_vrVLc6iK9JrhyiUdHuUEHMVFIrjWRJf6qImyon_6pXhCbGsrQuXJMLLzmUiY7H4cjba_aylbAQYMufSltWcTbJKFZHv8itaUyb3iwTnygNHPG1hSztkTCzG-mSvZA2M6SjPLxipWJ5QWkadAsbEFbmsvlpYzQYamzsowW2e6M2dJ-bhqfNuubgdzn_5P-9vm0941FPv0O5s4Xj6w2lgqNcbV7FziksFpxGUxM8yoyOsugWlCg4c_mhK08UJsI6uol1a-FqQJ3aQOJ-uQLNctwW37hpQDxBkkj3aIt98uQORu6tfZzWGmQUhN7jxb0hSHZAwd1bEIaMSUkbljJpdOLae2krvJF_P1OxYsFfhbgZbYGSDihMFJdSzbEzA1iRP3KXUCF1k2WHD6EH-Q8zVx5Lqa4-ZRR5QexLUj97IGXdciRVrLCtbjcggxG7b1nbsMnC5f6lTRptnttO10Z6mAYVzW_OnYXtkr-6VBehjMB23hAEcaO_PPWhJQdhNP_YHieF51zWN2J8ZVKEbiSxjHQjzY0NrGDGuBCi8cwAPyBODFCYAi5KaZUQglFjrPLCxR-0Nq5cI_SEitmiySngFIsRopFGl2jrkxMHhzBA6Oj3DPZEGVrf4G8-rNMHldjFNbENTQG-7uns\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
